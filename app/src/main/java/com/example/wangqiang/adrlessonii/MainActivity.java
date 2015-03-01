@@ -4,14 +4,25 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 
 public class MainActivity extends ActionBarActivity {
+
+    EditText editText;
+    Button buttonYes, buttonNo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        editText = (EditText) findViewById(R.id.EditText1);
+        buttonYes = (Button) findViewById(R.id.ButtonYes);
+        buttonNo = (Button) findViewById(R.id.ButtonNo);
     }
 
 
@@ -35,5 +46,19 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void buttonYesClick(View view) {
+
+        String resText = "That's great " +
+                String.valueOf(editText.getText());
+        Toast.makeText(this, resText, Toast.LENGTH_SHORT).show();
+    }
+
+    public void buttonNoClick(View view) {
+
+        String resText = "Bad to " +
+                String.valueOf(editText.getText());
+        Toast.makeText(this, resText, Toast.LENGTH_LONG).show();
     }
 }

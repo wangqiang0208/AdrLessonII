@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">AdrLessonII</string>
 
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Are you happiness ?</string>
     <string name="action_settings">Settings</string>
+    <string name="hint_your_name">输入你的姓名</string>
+    <string name="button_text_yes">Yes</string>
+    <string name="button_text_no">No</string>
 </resources>
